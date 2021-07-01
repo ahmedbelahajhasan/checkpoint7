@@ -1,0 +1,32 @@
+ALGORITHM checkpoint7
+VAR
+    set_declarations
+BEGIN
+    PROCEDURE dotProduct(vect_A, vect_B)
+    VAR
+        product = 0,n=3:INTEGER;
+    BEGIN
+        for (let i = 0; i < n; i++)
+            product = product + vect_A[i] * vect_B[i];
+        return product;
+    END
+
+    ALGORITHM orthogonal_or_not
+    VAR
+        vect_A : ARRAY_OF INTEGER[];
+                vect_B : ARRAY_OF INTEGER[];
+
+    BEGIN
+
+product= dotProduct(vect_A, vect_B)
+if(product==0)
+{
+    write ("A and B are orthogonal");
+}
+else 
+{
+    write ("A and B are not orthogonal");
+}
+
+    END
+END
